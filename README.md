@@ -10,9 +10,9 @@ TEMPLATE for your report:
 Monte Carlo Simulation in Python for the simulation of a Random Walk.
 
 ## Team Member(s):
-Shruti S. Sankolli
-Shraddha Machchar
-Sayali Tamble
+1. Shruti S. Sankolli
+2. Shraddha Machchhar
+3. Sayali Tamble
 
 (Note: Don't put your email addresses here (which is public).  If a student wants their NAME hidden as well, due to optional FERPA regulations, they can be listed purely by their GitHub ID).
 
