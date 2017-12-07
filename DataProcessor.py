@@ -12,12 +12,15 @@ class DataProcessor:
                 365.0 / trading_days)) - 1
         ticker_data['Returns'] = ticker_data['Adj Close'].pct_change()
         volatility = ticker_data['Returns'].std()*(252)**(1/2.0)
+        print("Base Rate is:"+str(base_rate))
+        print("Volatility is:"+str(volatility))
         return base_rate,volatility
 
-    def calc_expected_return_probablity_based_on_monte_carlo(self, base_rate,volatility,time_horizon, pv):
+    def calc_expected_return_probablity_based_on_monte_carlo(self, base_rate,volatility,time_horizon, pv,ending_value):
         iterations = 500
         sim = DataFrame()
         returns1 = DataFrame()
+        pv=int(pv)
         for x in range(iterations):
             annual_investment = 10000
             stream = []
@@ -35,8 +38,8 @@ class DataProcessor:
                 returns_list.append(returns)
                 pv = end
 
-        sim[x] = stream
-        returns1[x] = returns_list
-        ending_values = sim.loc[30]
-        return len(ending_values[ending_values> 'some_user_input']) / len(ending_values)
+            sim[x] = stream
+            returns1[x] = returns_list
+        ending_values = sim.loc[int(time_horizon)-1]
+        return len(ending_values[ending_values>int(ending_value)]) / len(ending_values)
 
