@@ -10,5 +10,12 @@ class DataReader:
         :param fromDate:The date from ehich the user wishes to start observing the price to compute base return and volatility
         :return:Ticker Data
         '''
-        ticker_data = data.DataReader(tickerName, 'yahoo', start=fromDate)
+
+        while True:
+            try:
+                ticker_data = data.DataReader(tickerName, 'yahoo', start=fromDate)
+            except:
+                continue
+            break
+
         return ticker_data
