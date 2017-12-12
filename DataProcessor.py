@@ -5,7 +5,9 @@ class DataProcessor:
 
     def calc_base_rate_and_volatility_by_ticker(self, ticker_data):
         '''
-        Calculate the base market rate
+        Calculates the base rate and volatility for the ticker
+        :param ticker_data: Input the ticker data
+        :return: Base Rate and Volatility
         '''
         trading_days = (ticker_data.index[-1] - ticker_data.index[0]).days
         base_rate = ((((ticker_data['Adj Close'][-1]) / ticker_data['Adj Close'][1])) ** (
@@ -18,6 +20,17 @@ class DataProcessor:
         return base_rate,volatility
 
     def calc_expected_return_probablity_based_on_monte_carlo(self, base_rate,volatility,time_horizon, pv,ending_value):
+        '''
+        Calculates the probability of the achieving the target amount
+        :param base_rate:Base return rate for the ticker
+        :param volatility: Base volatility for the ticker
+        :param time_horizon: The time horizon the user wishes to invest
+        :param pv: The initial amount the user wishes to start investment with
+        :param ending_value: The end amount the user wishes to see.
+        :return:
+        >>> calc_expected_return_probablity_based_on_monte_carlo(0.52,0.17,10,100,500000)
+        [],[]
+        '''
         iterations = 5000
         sim = DataFrame()
         returns1 = DataFrame()
