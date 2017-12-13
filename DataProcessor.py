@@ -1,5 +1,6 @@
 import numpy as np
 from pandas import DataFrame
+from DataReader import DataReader
 
 class DataProcessor:
 
@@ -8,6 +9,13 @@ class DataProcessor:
         Calculates the base rate and volatility for the ticker
         :param ticker_data: Input the ticker data
         :return: Base Rate and Volatility
+        >>> d = DataReader()
+        >>> data = d.fetch_ticker_data('AAPL','20100101')
+        >>> p = DataProcessor()
+        >>> p.calc_base_rate_and_volatility_by_ticker(data)
+        Base Rate is:0.259626145309
+        Volatility is:0.25335497362129206
+        (0.25962614530885419, 0.25335497362129206)
         '''
         trading_days = (ticker_data.index[-1] - ticker_data.index[0]).days
         base_rate = ((((ticker_data['Adj Close'][-1]) / ticker_data['Adj Close'][1])) ** (
@@ -28,8 +36,7 @@ class DataProcessor:
         :param pv: The initial amount the user wishes to start investment with
         :param ending_value: The end amount the user wishes to see.
         :return:
-        >>> calc_expected_return_probablity_based_on_monte_carlo(0.52,0.17,10,100,500000)
-        [],[]
+
         '''
         iterations = 5000
         sim = DataFrame()
