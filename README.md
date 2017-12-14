@@ -21,7 +21,11 @@ This involves predicting whether we can get profit/positive returns by investing
 This would involve predicting what kind of returns we can expect by investing in stocks with what kind of probability. We are estimating the expected level of return  and variance of the stock in question. 
 
 ### Hypothesis before running the simulation:
-We can make profit by investing in stocks.
+We have taken into consideration the profit and loss predicted by the simulation on investing in stocks.
+To handle this we have considered the below:
+We have considered the edge cases of probabilties of profit as well as loss being predicted for the user.
+It may happen that there is profit predicted for the ticker of GOOG but loss predicted or generated for any other ticker.
+So, we have taken into consideration all these cases.
 
 ### Simulation's variables of uncertainty
 List and describe your simulation's variables of uncertainty (where you're using pseudo-random number generation). 
@@ -31,10 +35,6 @@ Do you think it's a good representation of reality?
 We are going to use pseudo-random number generator for the following variables:
 1. Market return for the said stock
 2. Money Invested in the stock per year
-
-We have considered the edge cases of probabilties of profit as well as loss being predicted for the user. It may happen that
-there is profit predicted for the ticker of GOOG but loss predicted or generated for any other ticker.
-So, we have taken into consideration all these cases.
 
 ## Sources Used:
 https://www.investopedia.com/articles/07/montecarlo.asp
