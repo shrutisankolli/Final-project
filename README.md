@@ -32,8 +32,9 @@ We are going to use pseudo-random number generator for the following variables:
 1. Market return for the said stock
 2. Money Invested in the stock per year
 
-## Instructions on how to use the program:
-
+We have considered the edge cases of probabilties of profit as well as loss being predicted for the user. It may happen that
+there is profit predicted for the ticker of GOOG but loss predicted or generated for any other ticker.
+So, we have taken into consideration all these cases.
 
 ## Sources Used:
 https://www.investopedia.com/articles/07/montecarlo.asp
