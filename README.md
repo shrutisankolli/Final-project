@@ -18,9 +18,13 @@ Monte Carlo Simulation in Python for the simulation of a Random Walk.
 
 # Monte Carlo Simulation Scenario & Purpose:
 This involves predicting whether we can get profit/positive returns by investing in stocks.
-This would involve predicting what kind of returns we can expect by investing in stocks with what kind of probability. We are estimating the expected level of return  and variance of the stock in question. 
+This would involve predicting what kind of returns we can expect by investing in stocks with what kind of probability. We are estimating the expected level of return  and variance of the stock in question. We are also checking the probability of achieveing a target amount by investing in stocks.
 
 ### Hypothesis before running the simulation:
+Before running the simulation: We assume that we will always see profit and get high probability of reach our target amount.
+
+After running the simulation: We do not always get profit and we dont always reach the target amount.
+
 We have taken into consideration the profit and loss predicted by the simulation on investing in stocks.
 To handle this we have considered the below:
 We have considered the edge cases of probabilties of profit as well as loss being predicted for the user.
@@ -34,7 +38,7 @@ Do you think it's a good representation of reality?
 
 We are going to use pseudo-random number generator for the following variables:
 1. Market return for the said stock
-2. Money Invested in the stock per year
+2. Money re-invested in the stock per year
 
 ## Sources Used:
 https://www.investopedia.com/articles/07/montecarlo.asp
