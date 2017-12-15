@@ -1,11 +1,3 @@
-Create a FORK of this repository to store your code, data, and documentation for the final project. Detailed instructions for this assignment are in the course Moodle site.  The reason I'm asking you to fork this empty repository instead of creating a stand-alone repository is that it will be much easier for me and all students in the course to find all of our projects for code review and for grading. You can even get code review from students in the other section of IS590PR this way.
-
-Even though your fork of this repository shall remain public, you'll still need to explicitly add any students on your team as Collaborators in the Settings. That way you can grant them write privileges.
-
-DELETE the lines from TEMPLATE up.
-
-TEMPLATE for your report:
-
 # Title: 
 Monte Carlo Simulation in Python for the simulation of a Random Walk.
 
@@ -13,8 +5,6 @@ Monte Carlo Simulation in Python for the simulation of a Random Walk.
 1. Shruti S. Sankolli
 2. Shraddha Machchhar
 3. Sayali Tamble
-
-(Note: Don't put your email addresses here (which is public).  If a student wants their NAME hidden as well, due to optional FERPA regulations, they can be listed purely by their GitHub ID).
 
 # Monte Carlo Simulation Scenario & Purpose:
 This involves predicting whether we can get profit/positive returns by investing in stocks.
@@ -39,6 +29,21 @@ Do you think it's a good representation of reality?
 We are going to use pseudo-random number generator for the following variables:
 1. Market return for the said stock
 2. Money re-invested in the stock per year
+
+### Instructions to use the program:
+1. Provide the following user Inputs:
+a. Ticker name [Valid tickers are AAPL, GOOG, IBM etc]
+b. The no of years you wish to invest
+c. The initial investment amount
+d. The target amount you wish to achieve.
+
+2. The program will fetch the ticker price for the past 1 year and compute a base return rate and colatility rate.
+
+3. The program will then generate Monte Carlo simulations for 'n' no of years.
+
+4. It will generate the following outputs:
+a. Probability of reaching the target amount starting with inital amount in t years.
+b. Distribution of the Monte Carlo returns for the last year of the time duration.
 
 ## Sources Used:
 https://www.investopedia.com/articles/07/montecarlo.asp
